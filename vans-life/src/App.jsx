@@ -1,30 +1,23 @@
-import React from 'react'
-import { Routes, Route, Link } from 'react-router-dom'
-import Home from './Components/Home/Home'
-import Vans from './Components/Vans/Vans'
-
-
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Home from './Components/Home/Home';
+import About from './Components/About/About';
+import Header from './Components/Header/Header';
+import './App.css';
 
 function App() {
   return (
-    <div>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/vans">Vans</Link>
-          </li>
-        </ul>
-      </nav>
-
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/vans" element={<Vans />} />
-      </Routes>
+    <div id="root">
+      <Header />
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </main>
+      <footer className="footer">© 2022 #VANLIFE</footer>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

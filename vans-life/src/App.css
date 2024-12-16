@@ -1,0 +1,36 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial, sans-serif';
+}
+
+/* Ensure body fills the viewport height */
+body, html {
+  height: 100%;
+  background-color: #FFF5E1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Wrapper ensures content stretches and footer stays at bottom */
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1; /* Pushes the footer down */
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  padding: 10px 0;
+  font-size: 10px;
+}
