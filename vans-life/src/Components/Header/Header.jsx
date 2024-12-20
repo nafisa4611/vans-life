@@ -1,15 +1,36 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-
+import { NavLink } from 'react-router-dom';
+import './Header.css'
 export default function Header() {
   return (
     <header style={headerStyle}>
       <div className="logo">
-        <Link to="/" style={logoStyle}>#VANLIFE</Link>
+        <NavLink to="/" style={logoStyle}>
+          #VANLIFE
+        </NavLink>
       </div>
       <nav>
-        <Link to="/about" style={navLinkStyle}>About</Link>
-        <Link to="/vans" style={navLinkStyle}>Vans</Link>
+        <NavLink
+          to="/host"
+          style={navLinkStyle}
+          className={({ isActive }) => (isActive ? "active" : "")}
+        >
+          Host
+        </NavLink>
+        <NavLink
+          to="/about"
+          style={navLinkStyle}
+          className={({ isActive }) => (isActive ? "active" : "")}
+        >
+          About
+        </NavLink>
+        <NavLink
+          to="/vans"
+          style={navLinkStyle}
+          className={({ isActive }) => (isActive ? "active" : "")}
+        >
+          Vans
+        </NavLink>
       </nav>
     </header>
   );
@@ -36,3 +57,4 @@ const navLinkStyle = {
   color: '#333',
   fontWeight: '500',
 };
+

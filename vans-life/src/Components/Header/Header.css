@@ -1,0 +1,9 @@
+/* Add to your CSS file */
+.active {
+    color: #decdcd;                   /* Text color when active */
+    background-color: #f1d920;     /* Background color when active */
+    border-radius: 5px;            /* Rounded corners */
+    padding: 5px 10px;             /* Padding for better spacing */
+    font-weight: bold;             /* Bold text for emphasis */
+  }
+  

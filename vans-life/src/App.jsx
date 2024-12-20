@@ -6,6 +6,11 @@ import './App.css';
 import Vans from './Components/Vans/Vans';
 import VanDetail from './Components/VanDetail/VanDetail';
 import Layout from './Components/Layout/Layout';
+import HostLayout from './Components/HostLayout/HostLayout';
+import Dashboard from './Components/Dashboard/Dashboard';
+import Income from './Components/Income/Income';
+import MyVan from './Components/MyVan/MyVan';
+import Price from './Components/Price/Price'; // Import Price component
 
 function App() {
   return (
@@ -17,6 +22,14 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/vans" element={<Vans />} />
             <Route path="/vans/:id" element={<VanDetail />} />
+            {/* Nested routes for host */}
+            <Route path="/host" element={<HostLayout />}>
+              <Route index element={<Dashboard />} /> {/* Default route for /host */}
+              <Route path="dashboard" element={<Dashboard />} />
+              <Route path="income" element={<Income />} />
+              <Route path="price" element={<Price />} />
+              <Route path="my-van" element={<MyVan />} />
+            </Route>
           </Route>
         </Routes>
       </main>
